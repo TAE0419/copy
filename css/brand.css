@@ -1,0 +1,64 @@
+/* ----------------------------------------섹션1-------------------------------------------------------- */
+section{width: 100%;height: 100vh; background-color: #F3F3F3;
+        display: flex;justify-content: center;align-items: center;}
+.section1>div{
+            width: 96%;height: 88%; overflow: hidden; border-radius: 10px; margin-top: 70px;
+            display: flex; justify-content: center; align-items: center; position: relative;
+        }
+        .section1>div>h2{
+            width: 100%;
+            font-size: 60px; color: white; font-weight:100; text-align: center;
+            position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+        }
+        .section1>div>.square{
+            width: 80px; height: 80px;
+            border: 1px solid white; border-radius: 5px;
+            position: absolute; left: 50%; top: 85%; transform: translate(-50%,-50%);
+            display: flex; align-items: center; justify-content: center; flex-direction: column;
+        }
+        .section1>div>.square>span{width: 1px;height: 15px;background-color: white;}.section1>div>.square>img{width: 10px;}
+
+        /* ----------------------------------------섹션2-------------------------------------------------------- */
+
+        .section2{width: 100%; height: 95vh;}
+        .section2>.textBox{
+            width: 47%;height: 90%; background-color: white; gap: 45px;
+            border-radius: 10px; display: flex; justify-content: center; align-items: center; flex-direction: column;
+        }
+        .section2>.textBox>h1{font-size: 55px; font-weight: 100; text-align: center;}
+        .section2>.textBox>span{width: 70px;height: 1px;background-color: rgb(0, 0, 0);}
+        .section2>.textBox>p{font-size: 17px; font-weight: 300; text-align: center;}
+        .section2>.textBox>div{display: flex; gap: 10px;}
+        .section2>.textBox>div>h2{font-size: 19px;font-weight: 300;}
+        .section2>.imgBox{
+            width: 49%; height: 90%;
+            display: flex; justify-content: center;align-items: center;
+        }
+        .section2>.imgBox>img{width: 520px;}
+        /* ----------------------------------------섹션3-------------------------------------------------------- */
+        .section3{width: 100%;height: 95vh;position: relative;}
+        .section3>div{width: 96%;height: 95%; z-index: 5;} .section3>div>img{border-radius: 10px;}
+        .section3>div>.textBox{
+            color: white; gap: 20px;
+            position: absolute; top: 50%;left: 50%; transform: translate(-50%,-50%);
+            display: flex; justify-content: center;align-items: center; flex-direction: column;
+        }
+        .section3>div>.textBox>h1{font-size: 60px; font-weight: 100;}
+        .section3>div>.textBox>h2{font-size: 40px; font-weight: 100;}
+        .section3>div>.textBox>p{font-size: 17px; font-weight: 300; text-align: center;}
+        /* ----------------------------------------섹션4-------------------------------------------------------- */
+        .section4{width: 100%; height: 2500px; position: relative;}
+        .section4>.circle{
+            width: 1100px;height: 1100px;background-color: white; border-radius: 50%;
+            position: absolute; left: 40px;top:-120px;
+        }
+        .section4>img{position: absolute; right: 0;bottom: 0;}
+        .section4>.listBox{display: flex; gap: 170px; z-index: 5;}
+        .section4>.listBox>.list{display: flex; flex-direction: column; gap:200px;}
+        .section4>.listBox>.list1{margin-top:100px;}
+        .section4>.listBox>.list2{margin-top:-100px;}
+
+        .section4>.listBox>.list>.box{display: flex; justify-content: center;align-items: center;flex-direction: column;}
+        .section4>.listBox>.list>.box>img{border-radius: 10px;}
+        .section4>.listBox>.list>.box>h1{font-size: 55px; font-weight: 100; margin-top: 30px;}
+        .section4>.listBox>.list>.box>p{font-size: 17px; font-weight: 300; margin-top: 10px; text-align: center;}

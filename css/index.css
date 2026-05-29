@@ -1,0 +1,305 @@
+.items{
+    transition: all 1s;
+}
+
+nav{
+    transform: translateY(-100%); 
+    animation: slideDown 1s ease 1s both;
+}
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%); /* 시작: 화면 위로 100% 숨은 상태 */
+    }
+    100% {
+        transform: translateY(0); /* 끝: 제자리로 돌아온 상태 */
+    }
+}
+
+
+.section1>.bigBox.on>.box1{transform: translateX(-1000px);}
+.section1>.bigBox.on>.box2{transform: translateX(1000px);}
+.section1>div>img.on{ transform: scale(1);}
+.section1>div>.textBox.on{transform: translateY(0);opacity: 1;}
+
+.section2>.imgBox>img.on{transform: scale(1);}
+.section2>.textBox.on{transform: translateY(0);opacity: 1;}
+
+.section3>.circle.on{transform: translate(-50%, -50%) scale(1);}
+.section3>div>.box2.on{transform: translateY(0);opacity: 1;}
+.section3>div>div>img.on{transform: scale(1);}
+
+.section4>.imgBox.on>img{transform: translateX(0); }
+.section4>.textBox.on{transform: translateY(0);opacity: 1;}
+
+.section5>.textBox.on{transform: translateY(0);opacity: 1;}
+.section5>.scrollBox>div>.imgBox>img.on{ transform: scale(1);}
+.section5>.scrollBox>div>p.on{transform: translateY(0);opacity: 1;}
+
+.section6>div>.textBox.on{transform: translateX(-50%) translateY(0);opacity: 1;}
+.section6>div>.list.on{transform: translateX(-50%) translateY(0);opacity: 1;}
+
+.section7>.youtube.on{transform: translateY(0);opacity: 1;}
+.section7>.black.on{transform: scaleX(1);}
+.section7>.black>.textBox.on{transform: translateY(0);opacity: 1;}
+
+.section8>.textBox.on{transform: translateY(0);opacity: 1;}
+.section8.on>.imgBox>img:nth-child(even){transform: scale(1);}
+
+/* -------------------------------------------섹션1-------------------------------------------  */
+        section{
+            width: 100%;height: 100vh; background-color: #F3F3F3;
+            display: flex;justify-content: center;align-items: center;
+        }
+        
+        .section1>.bigBox{
+            width: 100%; height: 100%; position: absolute; left: 0;top: 0; z-index: 5;
+            
+        }
+        .section1>.bigBox>.box1{width: 50%; height: 100%; background-color: #F3F3F3; transform: translateX(0);transition: transform 1.2s ease;}
+        .section1>.bigBox>.box2{width: 50%; height: 100%; background-color: #F3F3F3;transform: translateX(0);transition: transform 1.2s ease;}
+
+        .section1>div{
+            width: 96%;height: 88%; overflow: hidden; border-radius: 10px; margin-top: 70px;
+            display: flex; justify-content: center; align-items: center; position: relative;
+        }
+        .section1>div>img{transform: scale(1.05);transition-delay: 1s;}
+        .section1>div>.textBox{
+            display: flex; justify-content: center; align-items: center; 
+            position: absolute;
+            width: 100%;height: 100%;
+            transform: translateY(100px);opacity: 0; transition-delay: 1s;
+        }
+        .section1>div>.textBox>p{
+            width: 100%;
+            font-size: 60px; color: white; font-weight:100; text-align: center;
+            position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+        }
+        .section1>div>.textBox>.shape{
+            display: flex; justify-content: center; align-items: center; gap: 50px;
+            position: absolute; left: 50%; top: 65%; transform: translateX(-50%)
+        }
+        .section1>div>.textBox>.shape>.circle{width: 8px;height: 8px;border-radius: 50%; background-color: white;}
+        .section1>div>.textBox>.shape>.rectangle{gap: 3px;display: flex; justify-content: center; align-items: center;}
+        .section1>div>.textBox>.shape>.rectangle>span{width: 3px;height: 12px; background-color: white;}
+
+        /* -- -------------------------------------------섹션2------------------------------------------- - */
+        .section2>.textBox{
+            width: 45%; height: 88%;margin-top: 70px; gap: 30px;
+            display: flex; justify-content: center; align-items: center; flex-direction: column;
+            transform: translateY(100px);opacity: 0; transition-delay: 0.3s;
+        }
+        
+        .section2>.textBox>h2{font-size: 18px;font-weight: 540;}
+        .section2>.textBox>h1{font-size: 60px;font-weight: 100; text-align: center;}
+        .section2>.textBox>span{width: 70px;height: 1px;background-color: rgb(0, 0, 0);}
+        .section2>.textBox>p{font-size: 18px; text-align: center; margin-top: 10px;color: gray;}
+        .section2>.imgBox{
+            width: 48%; height: 88%; margin-top: 70px; position: relative;
+            border-radius: 10px;overflow: hidden;
+        }
+        .section2>.imgBox>img{transform: scale(1.05);transition-delay: 1s;}
+        .section2>.imgBox>.black{
+            width: 100%;height: 13%; position: absolute; left: 0;bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .section2>.imgBox>.black>.left{
+            font-size: 25px; color: white; display: flex; justify-content: center;align-items: center; gap: 13px;
+            position: absolute;left: 5%;top: 50%; transform: translateY(-50%);
+        }
+        .section2>.imgBox>.black>.left>span{width: 2px;height: 18px;background-color: rgb(114, 114, 114);}
+        .section2>.imgBox>.black>.right{
+            display: flex; justify-content: center; align-items: center; gap: 25px;
+            position: absolute;right: 5%;top: 50%; transform: translateY(-50%);
+        }
+        .section2>.imgBox>.black>.right>span{width: 2px;height: 18px;background-color: rgb(114, 114, 114);}
+
+        /*-----------------------------------------------------섹션3-----------------------------------------------------------*/
+        .section3{overflow: hidden; position: relative;}
+        .section3>.circle{
+            width: 1250px; height: 1250px; border-radius: 50%; background-color: #ffffff;
+            position: absolute; left: 50%;top: 50%; 
+            transform: translate(-50%, -50%) scale(1.5); transition-delay: 0.1s;
+        }
+        .section3>div{
+            z-index: 10; width:96%; height: 72%; margin-top: 90px; flex-wrap: wrap; gap: 25px;
+            display: flex; justify-content: space-between;align-items: center;
+        }
+        .section3>div>div>img{transform: scale(1.1);transition-delay: 1s;}
+        .section3>div>.box1{width: 430px;height: 320px; overflow: hidden;border-radius: 7px; position: relative;}
+        .section3>div>.box1>.pictogram{
+            color: #ffffff; font-size:17px; 
+            display: flex; flex-direction: column; gap: 15px;
+            position: absolute; left: 50%;top: 50%; transform: translate(-50%,-50%);
+        }
+        .section3>div>.box2{
+            width: 890px;height: 320px; gap: 20px; 
+            display: flex; justify-content: center; align-items: center;flex-direction: column;
+            transform: translateY(100px);opacity: 0; transition-delay: 1s;
+        } 
+        .section3>div>.box2>h2{font-size: 17px;}
+        .section3>div>.box2>h1{font-size: 60px; font-weight: 100; text-align: center;}
+        .section3>div>.box2>p{font-size: 17px; color: gray;}
+
+        .section3>div>.box3{width: 430px;height: 320px; overflow: hidden;border-radius: 7px;position: relative;}
+        .section3>div>.box3>.pictogram{
+            color: #ffffff; font-size:17px; 
+            display: flex; flex-direction: column; gap: 15px;
+            position: absolute; left: 50%;top: 50%; transform: translate(-50%,-50%);
+        }
+        .section3>div>.box4{width: 430px;height: 320px; overflow: hidden;border-radius: 7px;position: relative;}
+        .section3>div>.box4>.pictogram{
+            color: #ffffff; font-size:17px; 
+            display: flex; flex-direction: column; gap: 15px;
+            position: absolute; left: 50%;top: 50%; transform: translate(-50%,-50%);
+        }
+        .section3>div>.box5 {width: 430px;height: 320px; overflow: hidden;border-radius: 7px;position: relative;}
+        .section3>div>.box5>.pictogram{
+            color: #ffffff; font-size:17px; 
+            display: flex; flex-direction: column; gap: 15px;
+            position: absolute; left: 50%;top: 50%; transform: translate(-50%,-50%);
+        }
+        .section3>div>.box6{width: 430px;height: 320px; overflow: hidden;border-radius: 7px;position: relative;}
+        .section3>div>.box6>.pictogram{
+            color: #ffffff; font-size:17px; 
+            display: flex; flex-direction: column; gap: 15px;
+            position: absolute; left: 50%;top: 50%; transform: translate(-50%,-50%);
+        }
+        .section3>div>.box7{width: 430px;height: 320px; overflow: hidden;border-radius: 7px;position: relative;}
+        .section3>div>.box7>.pictogram{
+            color: #ffffff; font-size:17px; 
+            display: flex; flex-direction: column; gap: 15px;
+            position: absolute; left: 50%;top: 50%; transform: translate(-50%,-50%);
+        }
+        .section3>div>.box7>img{width: 100%;height: 100%;object-fit: cover;}
+
+        /*-----------------------------------------------------섹션4-----------------------------------------------------------*/
+        .section4{background-color: black;}
+        .section4>.textBox{
+            width: 35%; height: 88%; margin-top: 70px; color: white;
+            display: flex; justify-content: center; align-items: end; flex-direction: column;
+            padding: 100px; gap: 40px;
+            transform: translateY(100px);opacity: 0; transition-delay: 1s;
+        }
+        .section4>.textBox>h2{font-size: 17px; font-weight: 300;}
+        .section4>.textBox>h1{font-size: 60px;font-weight: 100; text-align: end;}
+        .section4>.textBox>span{width: 70px;height: 1px; background-color: rgb(114, 114, 114);}
+        .section4>.textBox>.p1{font-size: 20px;color:rgb(114, 114, 114);}
+        .section4>.textBox>.p2{font-size: 17px; margin-top: -30px;color: rgb(114, 114, 114);}
+        .section4>.textBox>.p3{font-size: 12px;}
+
+        .section4>.imgBox{
+            width: 65%;height: 88%; margin-top: 70px; position: relative; margin-bottom: 10px;
+            overflow: hidden;  border-top-left-radius: 10px; border-bottom-left-radius: 10px;
+        }
+        .section4>.imgBox>img{
+            width: 100%;height: 100%;object-fit: cover;
+            border-top-left-radius: 10px; border-bottom-left-radius: 10px;
+            transform: translateX(-1300px);
+            transition: transform 0.7s ease; transition-delay: 0.3s;
+        }
+        .section4>.imgBox>.arrow{
+            display: flex; justify-content: center; align-items: center; gap: 25px;
+            position: absolute;left: 4%;bottom: 5%;
+        }
+        .section4>.imgBox>.arrow>span{width: 2px;height: 18px;background-color: rgb(221, 221, 221);}
+
+        /* <!-- -----------------------------------------------------섹션5----------------------------------------------------------- --> */
+        .section5{
+            display:flex;align-items: start; justify-content: center; flex-direction: column;
+            position: relative; padding: 40px; gap: 10px; overflow: hidden;
+        }
+        .section5>img{position: absolute; right: -10px;top: -50px;}
+        .section5>.textBox{
+            width: 90%;height: 20%; gap: 35px; margin-top: 70px;
+            display: flex; align-items: start; justify-content: center; flex-direction: column;
+            transform: translateY(100px);opacity: 0; transition-delay: 0.1s;
+        }
+        .section5>.textBox>h2{font-size: 17px;}
+        .section5>.textBox>h1{font-size: 60px;font-weight: 100;}
+        .section5>.scrollBox{
+            width: 133%;
+            display: flex; justify-content: space-between;align-items: center;
+        }
+        .section5>.scrollBox>div>.imgBox{width: 465px;height: 465px; overflow: hidden;border-radius: 10px;}
+        .section5>.scrollBox>div>.imgBox>img{ transform: scale(1.05);transition-delay: 0.7s;}
+        .section5>.scrollBox>div>p{font-size: 22px; font-weight: 300; margin-top: 20px;
+            transform: translateY(100px);opacity: 0;transition-delay: 0.7s;}
+        .section5>.scroll{
+            width: 100%; height: 1px; background-color: rgb(124, 124, 124); margin-top: 30px;
+        }
+         /* <!-- -----------------------------------------------------섹션6----------------------------------------------------------- --> */
+         .section6{background-color: black; overflow: hidden;}
+         .section6>div{
+            width: 96%;height: 88%; overflow: hidden; border-radius: 10px; margin-top: 70px;
+            display: flex; justify-content: center; align-items: center; position: relative;
+         }
+         .section6>div>img{width: 100%; height: 100%;object-fit: cover;}
+         .section6>div>.textBox{
+            position: absolute; left: 50%; top: 25%; 
+            transform: translateX(-50%) translateY(100px);opacity: 0; color: white; transition-delay: 0.3s;
+            display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 15px;
+        }
+        .section6>div>.textBox>h2{font-size: 17px; font-weight: 300;}
+        .section6>div>.textBox>h1{font-size: 60px; font-weight: 100;}
+        .section6>div>.list{
+            position: absolute; left: 50%; top: 50%;transform: translateX(-50%) translateY(100px);opacity: 0; color: white;
+            display: flex; justify-content: center; align-items: center; gap: 100px; transition-delay: 0.3s;
+        }
+        .section6>div>.list>.listBox{
+            width: 250px;height: 270px;
+            display: flex; justify-content: center; align-items: center; flex-direction: column;
+        }
+        .section6>div>.list>.listBox>h2{font-size: 30px; font-weight: 300; margin-top: 40px;}
+        .section6>div>.list>.listBox>p{font-size: 17px; margin-top: 20px; text-align: center;}
+
+        /* <!-- -----------------------------------------------------섹션7----------------------------------------------------------- --> */
+        .section7{ position: relative; overflow: hidden;}
+        .section7>.youtube{
+            width: 60%;height: 65%; z-index: 5;
+            position: absolute; left: 2%;top: 20%;
+            transform: translateY(100px);opacity: 0; transition-delay: 0.3s;
+        }
+        .section7>.youtube>iframe{
+            border-radius: 10px; 
+            width: 100%; height: 100%;
+        }
+        .section7>.black{
+            width: 60%; height: 85%; background-color: black;
+            position: absolute; left: 50%; top: 10%;
+            border-top-left-radius: 10px; border-bottom-left-radius: 10px;
+            padding-left: 300px; padding-top: 220px;
+            transform-origin: left; transform: scaleX(0);
+        }
+        .section7>.black>.textBox{
+            color: white; gap: 40px;
+            display: flex; justify-content: center; align-items: start; flex-direction: column;
+            transform: translateY(100px);opacity: 0; transition-delay: 1s;
+        }
+        .section7>.black>.textBox>h2{font-size: 17px; font-weight: 100;}
+        .section7>.black>.textBox>h1{font-size: 60px; font-weight: 100;}
+
+        .section7>.black>.textBox>div{display: flex; justify-content: center; align-items: end; gap: 20px;}
+        .section7>.black>.textBox>div>span{width: 300px;height: 1px;background-color: #ffffff;}
+        .section7>.black>.textBox>div>.arrow{
+            display: flex; justify-content: center; align-items: center; gap: 25px;
+        }
+        .section7>.black>.textBox>div>.arrow>span{width: 2px;height: 18px;background-color: rgb(82, 82, 82);}
+        .section7>.black>.textBox>p{font-size: 23px; color: rgb(114, 114, 114);}
+         /* <!-- -----------------------------------------------------섹션8----------------------------------------------------------- --> */
+        .section8{display: flex; justify-content: center; flex-direction: column; position: relative;overflow: hidden;}
+        .section8>.logo{width: 250%; height: 30%; position: absolute;bottom: 0px;}
+        .section8>.textBox{
+            display: flex; justify-content: center; align-items: center;flex-direction: column;
+            gap: 30px;margin-top: 100px;
+            transform: translateY(100px);opacity: 0; transition-delay: 0.3s;
+        }
+        .section8>.textBox>h2{font-size: 17px;}
+        .section8>.textBox>h1{font-size: 60px; font-weight: 100;}
+        .section8>.textBox>img{position: absolute; right: -5%;top: 27%;}
+        .section8>.imgBox{
+            width: 1000%; height: 50%; gap: 60px; z-index: 5;
+            display: flex; justify-content: center; align-items: center;
+        }
+        .section8>.imgBox>img:nth-child(odd){width: 300px;height: 300px; border-radius: 10px;}
+        .section8>.imgBox>img:nth-child(even){width: 200px;height: 200px; border-radius: 8px;
+            transform: scale(1.5); transition: all 1s; transition-delay: 1.1s;}

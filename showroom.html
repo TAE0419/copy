@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/common.css"/>
+    <link rel="stylesheet" href="./css/showroom.css"/>
+</head>
+<body>
+    <!-- -------------------------------------------메뉴바 구성------------------------------ -->
+    <header>
+        <nav>
+            <div class="menuBox"></div>
+            <div class="logo">
+                <a href="index.html"><img src="./img/logo.png"/></a>
+            </div>
+            <ul class="gnb">
+                <li>
+                    <a href="brand.html">BRAND</a>
+                    <ul class="snb">
+                        <li><a href="brand.html">브랜드스토리</a></li>
+                        <li><a href="brand1.html">연혁 및 인증</a></li>
+                        <li><a href="brand2.html">CI&BI</a></li>
+                        <li><a href="brand3.html">오시는길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="story.html">STORY</a>
+                    <ul class="snb">
+                        <li><a href="story.html">미디어</a></li>
+                        <li><a href="story1.html">홍보</a></li>
+                        <li><a href="story2.html">협찬</a></li>
+                        <li><a href="story3.html">이벤트</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="gallery.html">GALLERY</a>
+                    <ul class="snb">
+                        <li><a href="gallery.html">컬렉션</a></li>
+                        <li><a href="gallery1.html">인테리어</a></li>
+                        <li><a href="gallery2.html">익스테리어</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="showroom.html">SHOWROOM</a>
+                    <ul class="snb">
+                        <li><a href="showroom.html">전시장</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="ham">
+                <div><span></span><span></span></div>
+                <div><span></span><span></span></div>
+            </div>
+        </nav>
+    </header>
+    <!-- -------------------------------------풀메뉴창 구성-------------------------------- -->
+    <div class="fullMenu">
+        <div class="closeBtn">&#x2715;</div>
+        <div class="fullLogo">
+            <img src="./img/logo2.png"/>
+        </div>
+        <ul class="fullGnb">
+                <li>
+                    <a href="brand.html">BRAND</a>
+                    <span></span>
+                    <ul class="fullSnb">
+                        <li><a href="brand.html">브랜드스토리</a></li>
+                        <li><a href="brand1.html">연혁 및 인증</a></li>
+                        <li><a href="brand2.html">CI&BI</a></li>
+                        <li><a href="brand3.html">오시는길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="story.html">STORY</a>
+                    <span></span>
+                    <ul class="fullSnb">
+                        <li><a href="story.html">미디어</a></li>
+                        <li><a href="story1.html">홍보</a></li>
+                        <li><a href="story2.html">협찬</a></li>
+                        <li><a href="story3.html">이벤트</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="gallery.html">GALLERY</a>
+                    <span></span>
+                    <ul class="fullSnb">
+                        <li><a href="gallery.html">컬렉션</a></li>
+                        <li><a href="gallery1.html">인테리어</a></li>
+                        <li><a href="gallery2.html">익스테리어</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="showroom.html">SHOWROOM</a>
+                    <span></span>
+                    <ul class="fullSnb">
+                        <li><a href="showroom.html">전시장</a></li>
+                    </ul>
+                </li>
+            </ul>
+    </div>
+    <!-- -------------------------------------섹션-------------------------------------------- -->
+    <h2>작업 중</h2>
+    <script>
+        let gnb = document.querySelector('.gnb')
+        let nav = document.querySelector('nav')
+
+        gnb.addEventListener('mouseenter',function(){
+            nav.classList.add('show')
+        })
+        nav.addEventListener('mouseleave',function(){
+            nav.classList.remove('show')
+        })
+
+        let ham = document.querySelector('.ham')
+        let fullMenu = document.querySelector('.fullMenu')
+        let closeBtn = document.querySelector('.closeBtn')
+
+        ham.addEventListener('click',function(){
+            fullMenu.classList.add('on')
+        })
+        closeBtn.addEventListener('click',function(){
+            fullMenu.classList.remove('on')
+        })
+    </script>
+</body>
+</html>

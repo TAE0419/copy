@@ -1,0 +1,31 @@
+body{
+    display: flex;justify-content: center;align-items: center;flex-direction: column;
+    background-color: #F3F3F3;
+}
+.outBox{
+    width: 95%; height: 2000px; margin-top: 80px; gap: 100px;
+    background-color: white; border-radius: 10px;
+    display: flex; justify-content: center; align-items: center; flex-direction: column;
+}
+.textBox{
+    display: flex; justify-content: center;align-items: end; gap: 10px; 
+}
+.textBox>h1{font-size: 60px;}
+.textBox>p{font-size: 20px;margin-bottom: 15px;}
+.inBox{width: 80%; display: flex; flex-direction: column; gap: 20px;}
+.inBox>.titleBox>h2{font-size: 30px;}
+.list{
+    display: flex; justify-content: space-between; align-items: center;
+}
+.list>img{
+    width: 450px;height: 450px; border-radius: 5px;
+}
+.inBox>.arrow{display: flex; justify-content: end; align-items: center; gap: 25px;}
+.inBox>.arrow>span{height: 20px;width: 1px; background-color: rgb(177, 177, 177);}
+
+
+.list>.imgBox{
+    width: 340px; display: flex; justify-content: start; align-items: start; flex-direction: column; gap: 10px;
+}
+.list>.imgBox>img{border-radius: 5px;}
+.list>.imgBox>h2{font-size: 20px; font-weight: 300; margin-top: 20px;}
