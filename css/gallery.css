@@ -1,7 +1,61 @@
 body{
-    width: 100%; height: 100vh;
-    background-color: #F3F3F3; display: flex; justify-content: center;align-items: center;
+    width: 100%; height: 3500px; display: flex;justify-content: start;align-items: center;flex-direction: column;
+    background-color: #F3F3F3;
 }
-h2{
-    font-size: 150px; font-weight: 300;
+.outBox{
+    width: 95%; height: 3200px; gap: 100px; margin-top: 80px;
+    background-color: white; border-radius: 10px;
+    display: flex; justify-content: center; align-items: center; flex-direction: column;
+    margin-bottom: 50px; padding-bottom: 200px;
+}
+.textBox{
+    display: flex; justify-content: center;align-items: end; gap: 10px; 
+    margin-top: 160px;
+}
+.textBox>h1{font-size: 60px;}
+.textBox>p{font-size: 20px;margin-bottom: 15px;}
+.inBox{
+    display: grid; grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+}
+.imgCard {
+    width: 450px;height: 620px;
+    position: relative; /* 자식 요소(오버레이)가 위치를 잡을 기준점이 됩니다 */
+    cursor: pointer; overflow: hidden;
+}
+.imgCard>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px; object-fit: cover;
+}
+.imgCard .overlay {
+    position: absolute; border-radius: 5px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* 이미지를 어둡게 만드는 반투명 검은색 */
+    
+    /* 글씨를 정중앙에 배치 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; gap: 20px; font-weight: 300;
+    
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.imgCard:hover .overlay {
+    opacity: 1;
+}
+.bottomBox{
+    display: flex; justify-content: center; align-items: center; gap: 5px;
+}
+.arrow{
+    width: 40px;height: 40px; border: 1px solid rgb(201, 201, 201);
+    border-radius: 5px; display: flex; justify-content: center; align-items: center;
+}
+.bottomBox p{
+    font-weight: bold; margin: 15px;
 }
